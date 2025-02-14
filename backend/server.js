@@ -22,18 +22,25 @@ const alumnosRoutes = require('./routes/alumnos');
 const matriculasRoutes = require('./routes/matriculas');
 const estadisticasRoutes = require('./routes/estadisticas');
 
+
 app.use('/api/cursos', cursosRoutes);
 app.use('/api/centros', centrosRoutes);
 app.use('/api/alumnos', alumnosRoutes);
 app.use('/api/matriculas', matriculasRoutes);
 app.use('/api/estadisticas', estadisticasRoutes);
 
+//haber
+app.use(express.static(path.join(__dirname, 'frontend/public')));
+
+// Asegurar que Render sirva correctamente los archivos estáticos
+app.use('/js', express.static(path.join(__dirname, 'frontend/public/js')));
+app.use('/css', express.static(path.join(__dirname, 'frontend/public/css')));
+
+//haber
 
 // ✅ Servir archivos estáticos desde "frontend/public"
-app.use('/public', express.static(path.join(__dirname, '../frontend/public')));
-app.get('/test-static', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/js/main.js'));
-});
+app.use(express.static(path.join(__dirname, '../frontend/public')));
+
 // ✅ Ruta para la página principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/views/index.html'));
