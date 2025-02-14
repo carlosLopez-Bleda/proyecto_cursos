@@ -30,8 +30,10 @@ app.use('/api/estadisticas', estadisticasRoutes);
 
 
 // ✅ Servir archivos estáticos desde "frontend/public"
-app.use(express.static(path.join(__dirname, '../frontend/public')));
-
+app.use('/public', express.static(path.join(__dirname, '../frontend/public')));
+app.get('/test-static', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/public/js/main.js'));
+});
 // ✅ Ruta para la página principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/views/index.html'));
