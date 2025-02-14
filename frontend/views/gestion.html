@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Alumnos</h1>
+        <nav>
+            <a href="/cursos">Cursos</a>
+            <a href="/gestion">Gestión</a>
+            <a href="/estadisticas">Estadísticas</a>    
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Matricular Alumno</h2>
+            <form id="matricula-form">
+                <select id="alumno-select"></select>
+                <select id="curso-select"></select>
+                <button type="submit">Matricular</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Asignar Nota</h2>
+            <form id="nota-form">
+                <select id="alumno-nota-select"></select>
+                <input type="number" id="nota" min="0" max="10">
+                <button type="submit">Asignar Nota</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/gestion.js"></script>
+
+
+</body>
+</html>

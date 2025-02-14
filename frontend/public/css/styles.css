@@ -1,0 +1,233 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* --- Contenedor principal --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* --- Estilo para los títulos --- */
+h1, h2, h3 {
+    color: #222;
+    text-align: center;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+/* --- Barra de navegación --- */
+nav {
+    background-color: #007bff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* --- Estilo para listas de cursos, centros, alumnos --- */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: white;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Botones generales --- */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* --- Tabla para alumnos --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #007bff;
+    color: white;
+}
+
+/* --- Botones de acción (Matricular y Asignar Nota) --- */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background: #28a745;
+}
+
+.action-buttons button:nth-child(2) {
+    background: #ff5722;
+}
+
+.action-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* --- Diseño Responsive (Móviles y Tablets) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+/* --- Estilos para los formularios de matriculación y asignación de notas --- */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.form-container h3 {
+    text-align: center;
+    color: #222;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    flex: 1;
+}
+.form-group select,
+.form-group input {
+    flex: 2;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.form-group select {
+    width: 100%;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* --- Diseño Responsive para móviles y tablets --- */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+}
